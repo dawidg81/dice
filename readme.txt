@@ -1,7 +1,6 @@
 * DICE *
 
-Roll the 7-sided dice and see which number
-did you roll.
+Roll the dice and see which number did you roll.
 
 by dawid
 

@@ -26,15 +26,15 @@ int main(int argc, char *argv[])
     roll = rand() % (max - min + 1) + min;
   } else {
     unsigned int random_value;
-    FILE* urandom = fopen("/dev/urandom", "r");
+    FILE* random = fopen("/dev/random", "r");
 
-    if (urandom == NULL) {
+    if (random == NULL) {
       perror("fopen");
       return 1;
     }
 
-    fread(&random_value, sizeof(unsigned int), 1, urandom);
-    fclose(urandom);
+    fread(&random_value, sizeof(unsigned int), 1, random);
+    fclose(random);
 
     roll = random_value % (max - min + 1) + min;
   }
